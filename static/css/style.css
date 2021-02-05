@@ -62,19 +62,83 @@ a {
   position: relative;
 }
 .featured-details {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+  background-image: linear-gradient(
+    to top,
+    black 0%,
+    black 40%,
+    transparent 100%
+  );
 }
 .tags {
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   list-style: none;
+  padding: 0;
+}
+.tag {
+  display: flex;
 }
 .tag:before {
   content: "•";
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+.tag:first-child::before {
+  display: none;
+}
+
+.featured-actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+.button {
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 1em 2px 0.5em;
+  border: none;
+  border-radius: 3px;
+}
+.button::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+.button-secondary {
+  background: none;
+  color: white;
+  font-size: 1em;
+  min-width: 100px;
+  cursor: pointer;
+  border: none;
+}
+.button-secondary::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+.icon-plus::before {
+  background: url("../../images/icons/plus.svg");
+}
+.icon-play::before {
+  background: url("../../images/icons/play.svg");
+}
+.icon-info::before {
+  background: url("../../images/icons/info.svg");
 }
