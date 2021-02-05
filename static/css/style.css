@@ -170,8 +170,21 @@ a {
   left: 0;
   right: 0;
   background: black;
+  padding: 1em 0 0;
 }
 
 .tab-list {
   border: 1px solid green;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  color: #6e6e66;
+}
+.tab-list a {
+  color: #6e6e66;
+}
+.tab-item {
+  text-align: center;
 }
